@@ -1,0 +1,45 @@
+{
+  "name": "FileStorageContainer",
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "*"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "SYSTEMADMIN",
+      "permission": "ALLOW",
+      "property": [
+        "getContainers",
+        "download"
+      ]
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "VALUEFYADMIN",
+      "permission": "ALLOW",
+      "property": [
+        "getContainers"
+      ]
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "OPERATIONS",
+      "permission": "ALLOW",
+      "property": [
+        "getContainers",
+        "download"
+      ]
+    }
+  ],
+  "methods": {}
+}
